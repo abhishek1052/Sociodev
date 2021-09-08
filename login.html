@@ -2,59 +2,77 @@
 <html >
 <head>
     <title>Document</title>
+    <style>
+
+#form-container{
+    background-image: linear-gradient(to bottom right,orange ,rgba(255, 0, 0, 0.795), rgba(156, 0, 0, 0.925));
+    width: 10cm;
+    height: 13cm;
+    border-radius: 9px;
+    box-shadow: 10px 10px rgb(223, 222, 222);
+
+}
+#login{
+    background-image: linear-gradient(to bottom right,rgba(255, 0, 21, 0.897) ,rgba(255, 0, 0, 0.795));
+}
+.form-element{
+    background-color: rgb(219, 219, 219);
+    border-radius: 4px;
+    border: 2px solid white;
+}
+h1{
+    color: Black;
+    text-decoration: solid;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight:bolder;
+
+}
+.form-table {
+    border-collapse: separate;
+  border-spacing: 0 10px;
+            }
+    </style>
 </head>
 <body>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-    <div align ="center" style="padding: 30px; margin: auto;">
-        <form action="" style=" color: blue; font-family: 'Times New Roman', Times, serif; background-color: rgb(245, 255, 255) ;height: 8cm; width: 8cm;">
-            <br>
-            <br>
-            <br>
-            <h1>Login</h1>
-            <br>
-            <table>
-                <tr>
-                    <td>Username : </td>
-                    <td><input type="text" name="username" placeholder="Enter Username">
+        <div id="login-container" align ="center" id style="padding: 30px; margin: auto;">
+            <form id="form-container" action=""  font-family: 'Times New Roman', Times, serif; background-color: rgb(245, 255, 255) ;height: 8cm; width: 8cm;">
+                <br>
+                
+                <h1>Sign in </h1>
+                
+                <table>
+                    <tr>
+                        <tr><td>
+                        <a href="#"><img src="google.png"  alt="" style="border-radius: 50%;height: 45px;"></a>
+                        <a href="#"><img src="facebook.png"  alt="" style="border-radius: 50%;height: 45px;width: 50px;"></a>
+                        <a href="#"><img src="Linkedin.png"  alt="" style="border-radius: 50%;height: 45px;width: 50px;"></a>    
                     </td>
                 </tr>
-                <tr>
-                    <td>Password : </td>
-                    <td><input type="password" name="password" placeholder="Enter password">
-                    </td>
-                </tr>
-                <tr>
-                    <td>&nbsp;</td>
-                    <td colspan="2"><input type="submit" name="submit" value="Login" >
-                    </td>
-                </tr>
-                <tr></tr>
-                <tr><td colspan="2">
-                    <a  href="signup.html" style="text-decoration: none;">Dont have an Account</a>
-                </td></tr>
-            </table>
+                        <tr></tr>
+                    </tr>
+                </table>
+                    <div><h3 style="font-style: italic;">OR USE...</h3></div>
+                <table class="form-table">
+                    <tr>
+                        <td ><input class="form-element" type="text" name="username" placeholder="Enter Username">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td ><input class="form-element" type="password" name="password" placeholder="Enter password">
+                        </td>
+                    </tr>
+                </table>
+                <br>
+                <input  id="login" class="form-element" type="submit" name="submit" value="SIGN IN" style=" font-weight: bolder; border: 2px solid white; width: 4cm; height: 30px; border-radius: 20px;" >
+                <br><br><br>
+                <a  href="signup.html" style="text-decoration: none;color: aliceblue;font-size: medium;font-weight: bolder;">Dont have an Account ?</a>
+            </form>
+        </div>    
 
-        </form>
-
-    </div>
-
-
-
-
+    
 </body>
 <br>
-    <br>
-    <br>
-    <br>
-    <br>
+    <br><br><br>
     <div align="center">
         designed by 19BCE2677(BANG ABHISHEK DEEPAK)
     </div>
