@@ -4,6 +4,7 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    
   
   
   
@@ -24,7 +25,7 @@ body{
 #signup{
     /* background-image: linear-gradient(to bottom right,rgba(255, 0, 21, 0.897) ,rgba(255, 0, 0, 0.795)); */
     background-color: rgb(238, 238, 149);
-    font-weight: bolder; border: 2px solid rgb(80, 80, 10); width: 4cm; height: 30px; border-radius: 20px;
+    font-weight: bolder; border: 2px solid rgb(146, 146, 132); width: 4cm; height: 30px; border-radius: 20px;
 }
 #signup:hover{
     background-image: linear-gradient(to bottom right,white ,rgb(241, 241, 134));
@@ -33,3 +34,8 @@ table{
     border-collapse: separate;
   border-spacing: 0 10px;
 }
+@media only screen and (max-width: 480px) {
+    img {
+      width: 100%;
+    }
+  }

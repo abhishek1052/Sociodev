@@ -2,37 +2,113 @@
 <html >
     <head>
         <title>Document</title>
+        <link rel="stylesheet" href="signup.css">
+    <style>
+        .form-table {
+    border-collapse: separate;
+  border-spacing: 0 10px;
+            }
+            ul {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /* background-color: #333; */
+    background: #111;
+  }
+  
+li {
+    float: left;
+  }
+  
+li a {
+    display: block;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+li a:hover {
+    background-color: rgb(241, 235, 235);
+    color: #111;
+  }
+    </style>
+
+
+<script>
+    function validateform1(){
+        var user=document.forms["form1"]["username"].value;
+        var pass=document.forms["form1"]["password"].value;
+        var new_pass=document.forms["form1"]["confirm-password"].value;
+        if(user==""){
+            alert("field cannot be empty");
+            
+            return false;
+        }
+        else if(pass!=new_pass){
+            alert("Password does not match with Written password");
+        } 
+        return false;
+    }
+    function func1(){        
+            document.getElementById("username").style["boxShadow"] = "0 0 5px red";
+            return ;
+    }
+    function func2(){
+        document.getElementById("username").style["boxShadow"]="0 0 0";
+        return ;
+    }
+    function func3(){
+        document.getElementById("password").style["boxShadow"] = "0 0 5px red";
+        return ;
+    }
+    function func4(){
+        document.getElementById("password").style["boxShadow"]="0 0 0";
+        return ;
+    }
+</script>
     </head>
-    <body>
-    <link rel="stylesheet" href="signup.css">
+    <body>    
 <br>
+<ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#news">News</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li style="float:right"><a class="active" href="#about">About</a></li>
+  </ul>
+  <br><br>
     <div align ="center" >
-        <form id="form-container" action=""  >
+        <form id="form-container"  name="form1" onsubmit="return validateform1()" method="post" >
             <br>
             <h1>Sign Up</h1>
             <table>
                 <tr>
                     <td>Username : </td>
-                    <td><input type="text" name="username" placeholder="Enter Username">
+                    <td><input id="username" type="email" name="username" placeholder="Enter Username" onclick="return func1()" onmouseout="return func2()">
                     </td>
                 </tr>
                 <tr>
                     <td>Password : </td>
-                    <td><input type="password" name="password" placeholder="Enter password">
+                    <td><input id="password" type="password" name="password" placeholder="Enter password" onclick="return func3()" onmouseout="return func4()">
                     </td>
                 </tr>
                 <tr>
                     <td>Confirm Password : </td>
-                    <td><input type="password" name="password" placeholder="Re-enter password">
+                    <td><input type="password" name="confirm-password" placeholder="Re-enter password" onmouseover="return func1()">
                     </td>
                 </tr>
                 <tr>
                     <td>Age :</td>
-                    <td><input type="number" name="age" placeholder="Enter Age"></td>
+                    <td><input type="number" name="age" placeholder="Enter Age" required ></td>
                 </tr>
                 <tr>
                     <td>Profession :</td>
-                    <td>
+                    <td >
                         <input type="radio" value="Student" name="profession">Student
                         <input type="radio" value="Teacher" name="profession">Teacher
                     </td>
@@ -43,7 +119,7 @@
                         Gender :
                     </td>
                     <td>
-                       <select name="Gender" >
+                       <select name="Gender" required>
                            <option value="Male">Male</option>
                            <option value="Female">Female</option>
                            <option value="Other">Other</option>
@@ -56,7 +132,7 @@
                 </tr>
                 <tr>
                     <td>
-                        comments
+                        Comments
                     </td>
                     <td>
                         <textarea name="" id="" cols="30" rows="1" style="max-height: 40px; max-width: 200px;"></textarea>
@@ -82,8 +158,7 @@
     </div>
 
 </body>
-    <br>
-    <br>
+    
     <br>
     <br>
     <br>
