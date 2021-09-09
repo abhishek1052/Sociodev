@@ -3,22 +3,41 @@
 <head>
     <title>Document</title>
     <style>
+body{
 
+  background-image: url('Background.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+
+
+
+}
 #form-container{
-    background-image: linear-gradient(to bottom right,orange ,rgba(255, 0, 0, 0.795), rgba(156, 0, 0, 0.925));
-    width: 10cm;
+    
+    width: 15cm;
     height: 13cm;
-    border-radius: 9px;
-    box-shadow: 10px 10px rgb(223, 222, 222);
+    border-radius: 25px;
+    
+    border: 5px solid rgb(218, 218, 4);
 
+
+}
+#form-container:hover{
+    background-image: linear-gradient(to bottom right,white ,rgb(241, 241, 134));
 }
 #login{
-    background-image: linear-gradient(to bottom right,rgba(255, 0, 21, 0.897) ,rgba(255, 0, 0, 0.795));
+    /* background-image: linear-gradient(to bottom right,rgba(255, 0, 21, 0.897) ,rgba(255, 0, 0, 0.795)); */
+    background-color: rgb(238, 238, 149);
+    
+}
+#login:hover{
+    background-image: linear-gradient(to bottom right,white ,rgb(241, 241, 134));
 }
 .form-element{
-    background-color: rgb(219, 219, 219);
+    background-color: rgb(226, 222, 222);
     border-radius: 4px;
-    border: 2px solid white;
+    border: 2px solid rgb(58, 58, 2);
 }
 h1{
     color: Black;
@@ -34,6 +53,13 @@ h1{
     </style>
 </head>
 <body>
+    <table>
+        <tr>
+            <td>
+                
+            </td>
+        </tr>
+    </table>
         <div id="login-container" align ="center" id style="padding: 30px; margin: auto;">
             <form id="form-container" action=""  font-family: 'Times New Roman', Times, serif; background-color: rgb(245, 255, 255) ;height: 8cm; width: 8cm;">
                 <br>
@@ -54,24 +80,24 @@ h1{
                     <div><h3 style="font-style: italic;">OR USE...</h3></div>
                 <table class="form-table">
                     <tr>
-                        <td ><input class="form-element" type="text" name="username" placeholder="Enter Username">
+                        <td ><input class="form-element" type="text" name="username" placeholder="Enter Username" style="width: 6cm; height: 0.9cm;">
                         </td>
                     </tr>
                     <tr>
-                        <td ><input class="form-element" type="password" name="password" placeholder="Enter password">
+                        <td ><input class="form-element" type="password" name="password" placeholder="Enter password" style="width: 6cm; height: 0.9cm;" >
                         </td>
                     </tr>
                 </table>
                 <br>
-                <input  id="login" class="form-element" type="submit" name="submit" value="SIGN IN" style=" font-weight: bolder; border: 2px solid white; width: 4cm; height: 30px; border-radius: 20px;" >
+                <input  id="login" class="form-element" type="submit" name="submit" value="SIGN IN" style=" font-weight: bolder; border: 2px solid rgb(80, 80, 10); width: 4cm; height: 30px; border-radius: 20px;" >
                 <br><br><br>
-                <a  href="signup.html" style="text-decoration: none;color: aliceblue;font-size: medium;font-weight: bolder;">Dont have an Account ?</a>
+                <a  href="signup.html" style="text-decoration: none;color: aliceblue;font-size: medium;font-weight: bolder;color: black;">Dont have an Account ?</a>
             </form>
         </div>    
 
     
 </body>
-<br>
+<br><br><br>
     <br><br><br>
     <div align="center">
         designed by 19BCE2677(BANG ABHISHEK DEEPAK)
