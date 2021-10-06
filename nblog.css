@@ -4,10 +4,13 @@ body {
     background: #f1f1f1;
   }
 
-  /* p {
-    padding: 0 15px 10px 5px;
-  } */
+  #id1 {
+      color: black;
+  }
 
+  p::first-letter{
+      font-weight: bold;
+  }
   .leftcolumn {
     float: left;
     width: 90%;
@@ -24,9 +27,4 @@ body {
     content: "";
     display: table;
     clear: both;
-  }
-  @media only screen and (max-width: 480px) {
-    img {
-      width: 100%;
-    }
   }
