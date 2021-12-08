@@ -1,0 +1,41 @@
+body{
+
+    background-image: url('Background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    
+  
+  
+  
+  }
+  #form-container{
+    
+    width: 15cm;
+    height: 15cm;
+    border-radius: 25px;
+    
+    border: 5px solid rgb(218, 218, 4);
+
+
+}
+#form-container:hover{
+    background-image: linear-gradient(to bottom right,white ,rgb(241, 241, 134));
+}
+#signup{
+    /* background-image: linear-gradient(to bottom right,rgba(255, 0, 21, 0.897) ,rgba(255, 0, 0, 0.795)); */
+    background-color: rgb(238, 238, 149);
+    font-weight: bolder; border: 2px solid rgb(146, 146, 132); width: 4cm; height: 30px; border-radius: 20px;
+}
+#signup:hover{
+    background-image: linear-gradient(to bottom right,white ,rgb(241, 241, 134));
+}
+table{
+    border-collapse: separate;
+  border-spacing: 0 10px;
+}
+@media only screen and (max-width: 480px) {
+    img {
+      width: 100%;
+    }
+  }

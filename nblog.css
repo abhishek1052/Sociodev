@@ -1,0 +1,30 @@
+body {
+    font-family: Arial;
+    padding: 20px;
+    background: #f1f1f1;
+  }
+
+  #id1 {
+      color: black;
+  }
+
+  p::first-letter{
+      font-weight: bold;
+  }
+  .leftcolumn {
+    float: left;
+    width: 90%;
+  }
+  
+  .card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5%;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }

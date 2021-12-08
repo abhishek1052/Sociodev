@@ -1,6 +1,3 @@
-<!-- Contributor
-Deepak Pandey
-19BCI0003 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +7,7 @@ Deepak Pandey
     <title>Document</title>
     <style>
         body{
-            background-image: url('Image/Background.jpg');
+            background-image: url('Background.jpg');
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: cover;
@@ -94,15 +91,14 @@ Deepak Pandey
       <br>
       <br>
       <?php 
-    if(isset($_POST['update'])){
         $DBservername='localhost';
         $User="root";
         $pwd="";
         $conCheck=mysqli_connect($DBservername,$User,$pwd);
-        mysqli_select_db($conCheck,"sociodev");
+        mysqli_select_db($conCheck,"Sociodev");
+    if(isset($_POST['update'])){
         $v1=$_POST['ques'];
-        $table="Create table unanswered(user_id varchar(25), ques varchar(255))";
-        mysqli_query($conCheck,$table);
+        
         session_start();
         // $_SESSION['userid']='abc@gmail.com';
         $p1=$_SESSION['userid'];
@@ -124,9 +120,24 @@ Deepak Pandey
 
     </form>
 <?php } ?>
+
+
+<?php
+    if(isset($_POST['like'])){
+        $v1=$_POST['qid'];
+        $lke="update answered set likecount=likecount+1 where quesid='$v1'";
+        mysqli_query($conCheck,$lke);
+    }
+    if(isset($_POST['dislike'])){
+        $v1=$_POST['qid'];
+        $lke="update answered set likecount=likecount-1 where quesid='$v1'";
+        mysqli_query($conCheck,$lke);
+    }
+
+?>
     
     <div >
-        <img src="Image\download.png">
+        <img src="download.png">
         <h2>Already answered questions.</h2>
 
         <dl style="background-color: cornsilk;">
@@ -134,14 +145,34 @@ Deepak Pandey
             $fetch='select * from answered';
             $info=mysqli_query($conCheck,$fetch);
             while($row=mysqli_fetch_array($info)){
-                echo "<dt id='f1'><b>$row[2]</b></dt><dd id='f1'>$row[3]</dd>";
+                echo "<dt id='f1'>
+                <div style='display: flex;
+                flex-direction: flex-end;'> 
+                <div>
+                <b style='display: flex;flex-direction: flex-end;' >$row[5]</b></div>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <div>
+                <b>$row[2] : $row[3]</b></div>
+                </dt>
+                <dd id='f1'>$row[4]</dd>
+                <div style='display: flex;
+                flex-direction: row;'> 
+                <form method='Post'>
+                    <input type='submit' value='like' name='like'>
+                    <input type='hidden' name='qid' value=$row[0] > 
+                </form>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <form method='Post'>
+                    <input type='submit' value='dislike' name='dislike'>
+                    <input type='hidden' name='qid' value=$row[0] > 
+                </form>
+                </div>
+                <br>";
             }
         ?>
              
         </dl>
-        <div align="center">
-            <h2>Deepak Pandey (19BCI0003) </h2> 
-        </div>
+        
 </div>
 </div>
 </body>
