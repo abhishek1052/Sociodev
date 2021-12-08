@@ -10,13 +10,12 @@ $res=mysqli_query($conCheck,$Query1);
 if(isset($_POST['view'])){
     $_SESSION['usertoview']=$_POST['pk_user'];
     $_SESSION['postn']=$_POST['pk_post_n'];
+    // $_SESSION['content']=$_POST['pk_content'];
+    // $_SESSION['headline']=$_POST['pk_headline'];
+
     header('Location:view.php');
 }
-
-
-
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,14 +26,10 @@ if(isset($_POST['view'])){
 </head>
 <style>
     body{
-
 background-image: url('Background.jpg');
 background-repeat: no-repeat;
 background-attachment: fixed;
 background-size: cover;
-
-
-
 
 }
 </style>
@@ -61,6 +56,7 @@ while($rows=mysqli_fetch_array($res)){
                     <input type='submit' name='view' value='view' style='background-color: yellow;'  >
                     <input type='hidden' name='pk_user' value=$rows[0]>
                     <input type='hidden' name='pk_post_n' value=$rows[1]>
+                    
                 </form>
             </td>
         </tr>
@@ -69,11 +65,6 @@ while($rows=mysqli_fetch_array($res)){
 }
 
 echo "</table>";
-
-
-
-
-
 
 ?>
 

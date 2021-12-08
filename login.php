@@ -38,10 +38,8 @@ if(isset($_POST['submit']) && $_SERVER["REQUEST_METHOD"]=="POST"){
 <body>
     
     <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#news">News</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li style="float:right"><a class="active" href="#about">About</a></li>
+        <li><a href="login.php">Home</a></li>
+        
     </ul>
     <br>
       <br><br>
@@ -75,7 +73,7 @@ if(isset($_POST['submit']) && $_SERVER["REQUEST_METHOD"]=="POST"){
                 <input  id="login" class="form-element" type="submit" name="submit" value="SIGN IN" style=" font-weight: bolder; border: 2px solid rgb(80, 80, 10); width: 4cm; height: 30px; border-radius: 20px;" >
                 <br><br><br>
                
-                <a  href="signup.html" style="text-decoration: none;color: aliceblue;font-size: medium;font-weight: bolder;color: black;">Dont have an Account ?</a>
+                <a  href="signup.php" style="text-decoration: none;color: aliceblue;font-size: medium;font-weight: bolder;color: black;">Dont have an Account ?</a>
             </form>
         </div>  
         <div id="result">

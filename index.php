@@ -22,6 +22,7 @@
     $Query7="create table global_shown(user_id varchar(20),post_no int,content nvarchar(4000),headline nvarchar(50),primary key(user_id,post_no))";
     mysqli_query($conCheck,$Query7);
     
+    
  }
  else{
      echo "error";

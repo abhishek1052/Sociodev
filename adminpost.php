@@ -68,9 +68,9 @@ if(isset($_POST['submit']) && $_SERVER["REQUEST_METHOD"]=="POST" ){
     <ul>
         <li><a href="Recent.html">Recents</a></li>
         <li><a href="#news">News</a></li>
-        <li><a href="NBlog.html">Explore</a></li>
+        <li><a href="global.php">Explore</a></li>
         <li><a href="approve.php">Approve and Disapprove</a></li>
-        <li style="float:right"><a href="adminlogin.php">Logout</a></li>
+        <li style="float:right"><a href="index.php">Logout</a></li>
         <li style="float:right"><a class="active"href="profile.php">
             <?php
         

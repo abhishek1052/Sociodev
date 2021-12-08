@@ -1,0 +1,112 @@
+
+  body{
+    background-image: url('Background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    
+  }
+  .post {
+    width:450px; 
+   max-width:450px; 
+    height:450px;
+   max-height:450px;
+   display: inline-block;
+    padding: 5px;
+    margin: 2%;
+    text-align: center;
+    color: white;
+    background-color: red;
+    border: none;
+    border-radius: 16px;
+    font-size: 1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    overflow: hidden;
+  text-overflow: ellipsis;
+  }
+  
+  
+  
+  #readmore {
+    background-color: rgb(106, 90, 205);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: all 0.4s linear;
+  }
+  
+  .post:hover #readmore {
+    box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: all 0.4s linear;
+    border-radius: 25px;
+  }
+  
+  #title {
+    opacity: 0.45;
+    transition: all 0.4s linear;
+    width: 27%;
+    display: inline-block;
+  }
+  
+  #title:hover {
+    opacity: 1;
+    transition: all 0.3s linear;
+    text-shadow: 1px 2px 10px #000000;
+  }
+  
+  img:hover {
+    transition: all 1.3s linear;
+    transform: rotate(360deg);
+    display: inline-block;
+  }
+  
+  #time {
+    opacity: 0.45;
+    transition: all 0.4s linear;
+    display: inline-block;
+    float: right;
+  }
+  
+  #time:hover {
+    opacity: 1;
+    transition: all 0.3s linear;
+    text-shadow: 1px 2px 10px #000000;
+  }
+  ul {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /* background-color: #333; */
+    background: #111;
+  }
+  
+li {
+    float: left;
+  }
+  
+li a {
+    display: block;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+li a:hover {
+    background-color: rgb(241, 235, 235);
+    color: #111;
+}
+

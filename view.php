@@ -9,13 +9,17 @@ $userv=$_SESSION['usertoview'];
 $post_n=$_SESSION['postn'];
 $Query="select * from global_posts where user_id='$userv' and post_no=$post_n ";
 $res=mysqli_query($conCheck,$Query);
-// if(isset($_post['approve'])){
-//     $Query="insert into global_shown values('$userv',$post_n,)";
-//     $res=mysqli_query($conCheck,$Query);
+$res1=mysqli_query($conCheck,$Query);
+if(isset($_POST['appr'])){
+    while($x=mysqli_fetch_array($res1)){
 
-
-// }
-
+        $Query_g="insert into global_shown values('$userv','$post_n','$x[2]','$x[3]')";
+        $res=mysqli_query($conCheck,$Query_g);
+        $q1="delete from global_posts where user_id='$userv' and post_no='$post_n'";
+        mysqli_query($conCheck,$q1);
+        header('Location:approve.php');
+    }
+}
 
 ?>
 <!DOCTYPE html>
@@ -35,8 +39,7 @@ $res=mysqli_query($conCheck,$Query);
 <body>
     <?php
     while($rows=mysqli_fetch_array($res)){
-
-        echo"<h1 align='center' >
+        echo"<h1 align='center'>
 
         $rows[3];
         
@@ -47,8 +50,8 @@ $res=mysqli_query($conCheck,$Query);
     }
     ?>
     <br><br><br>
-    <form action="view.php" align='center'>
-        <input style="background-color: yellow;" type="submit" value="Approve" name="approve">
+    <form action="view.php" align='center' method="post">
+        <input style="background-color: yellow;" type="submit" value="approve" name="appr">
     </form>
 
 </body>
