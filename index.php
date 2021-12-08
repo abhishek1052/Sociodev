@@ -7,15 +7,21 @@
  if($conCheck){
      mysqli_query($conCheck,"create database Sociodev");
      mysqli_select_db($conCheck,"Sociodev");
-     $Query1="create table posts(user_id varchar(20),post_no int,content varchar(10000),headline varchar(50),primary key(user_id,post_no))";
+     $Query1="create table posts(user_id varchar(20),post_no int,content nvarchar(4000),headline nvarchar(50),primary key(user_id,post_no))";
      mysqli_query($conCheck,$Query1);
      $Query2="create table postcnt(user_id varchar(20),count int,primary key(user_id))";
      mysqli_query($conCheck,$Query2);
     $Query3="create table signup(user_id varchar(20),password varchar(20),age int,primary key(user_id))";
-mysqli_query($conCheck,$Query3);
-$Query4="Create table unanswered(user_id varchar(20), ques varchar(255))";
-        mysqli_query($conCheck,$Query4);
-     
+    mysqli_query($conCheck,$Query3);
+    $Query4="create table unanswered(user_id varchar(20), ques varchar(255))";
+    mysqli_query($conCheck,$Query4);
+    $Query5="create table adminsignup(admin_id varchar(20),password varchar(20),age int,primary key(admin_id))";
+    mysqli_query($conCheck,$Query5);
+    $Query6="create table global_posts(user_id varchar(20),post_no int,content nvarchar(4000),headline nvarchar(50),primary key(user_id,post_no))";
+    mysqli_query($conCheck,$Query6);
+    $Query7="create table global_shown(user_id varchar(20),post_no int,content nvarchar(4000),headline nvarchar(50),primary key(user_id,post_no))";
+    mysqli_query($conCheck,$Query7);
+    
  }
  else{
      echo "error";
@@ -55,6 +61,15 @@ $Query4="Create table unanswered(user_id varchar(20), ques varchar(255))";
                         <input  id="login" class="form-element" type="submit" name="submit" value="Login"
                      style=" font-weight: bolder; border: 2px solid rgb(80, 80, 10); width: 4cm; height: 30px; border-radius: 20px;" >
                     </form>
+                    
+                </td>
+                <td>
+                    <form action="adminlogin.php">
+            
+                        <input  id="admin-login" class="form-element" type="submit" name="submit" value="Admin-Login"
+                     style=" font-weight: bolder; border: 2px solid rgb(80, 80, 10); width: 4cm; height: 30px; border-radius: 20px;" >
+                    </form>
+                    
                 </td>
             </tr>
 

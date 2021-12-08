@@ -7,7 +7,7 @@ mysqli_select_db($conCheck,"Sociodev");
 if(isset($_POST['submit']) && $_SERVER["REQUEST_METHOD"]=="POST"){
     $userid=$_POST["username"];
     $password=$_POST["password"];
-    $validate="select * from signup";
+    $validate="select * from adminsignup";
     $res=mysqli_query($conCheck,$validate);
     $f=0;
     while($rows=mysqli_fetch_array($res)){
@@ -16,8 +16,7 @@ if(isset($_POST['submit']) && $_SERVER["REQUEST_METHOD"]=="POST"){
         session_start();
         $_SESSION['userid']=$userid;
         $_SESSION['password']=$password;
-        header('Location:post.php');
-
+        header('Location:adminpost.php');
         }
     }
     if($f==0){
@@ -48,7 +47,7 @@ if(isset($_POST['submit']) && $_SERVER["REQUEST_METHOD"]=="POST"){
         <div  id="login-container"  align ="center" id style="padding: 30px; margin: auto; " method="post">
             <form name="form2" id="form-container" action="" method="post" height: 8cm; width: 8cm; onsubmit="validation()">
                 <br>
-                <h1>Sign in </h1>
+                <h1>Sign in (Admin)</h1>
                 <table>
                     <tr>
                         <tr><td>

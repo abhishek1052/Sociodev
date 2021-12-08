@@ -53,7 +53,7 @@ $userid=$_SESSION['userid'];
 </head>
 <body>
     <ul>
-        <li><a href="home.html"><strong></strong>Developer</strong></a></li>
+        <li><a href="frame1.html"><strong></strong>Developer</strong></a></li>
         <li><a href="profile.php">Profile</a></li>
         <li><a href="#About">About</a></li>
         <li style="float:right"><a class="active" href="ques.php">Ask</a></li>

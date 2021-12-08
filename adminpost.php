@@ -27,11 +27,9 @@ if(isset($_POST['submit']) && $_SERVER["REQUEST_METHOD"]=="POST" ){
                 $postcnt=$postcnt+1;
                 $f1=1;
                 $query2="insert into posts value('$userid',$postcnt,'$content','$headline')";
-                $query3="insert into global_posts value('$userid',$postcnt,'$content','$headline')";
                 mysqli_query($conCheck,$query2);
+                $query3="update postcnt set count=$postcnt where user_id='$userid'";
                 mysqli_query($conCheck,$query3);
-                $query4="update postcnt set count=$postcnt where user_id='$userid'";
-                mysqli_query($conCheck,$query4);
                 break;
             }
         }
@@ -39,11 +37,9 @@ if(isset($_POST['submit']) && $_SERVER["REQUEST_METHOD"]=="POST" ){
                 
                 $postcnt=$postcnt+1;
                 $query2="insert into posts value('$userid',$postcnt,'$content','$headline')";
-                $query3="insert into global_posts value('$userid',$postcnt,'$content','$headline')";
-                $query4="insert into postcnt value('$userid',$postcnt)";
+                $query3="insert into postcnt value('$userid',$postcnt)";
                 mysqli_query($conCheck,$query2);
                 mysqli_query($conCheck,$query3);
-                mysqli_query($conCheck,$query4);
             
             
             
@@ -73,8 +69,8 @@ if(isset($_POST['submit']) && $_SERVER["REQUEST_METHOD"]=="POST" ){
         <li><a href="Recent.html">Recents</a></li>
         <li><a href="#news">News</a></li>
         <li><a href="NBlog.html">Explore</a></li>
-        <li><a href="#about"></a></li>
-        <li style="float:right"><a href="login.php">Logout</a></li>
+        <li><a href="approve.php">Approve and Disapprove</a></li>
+        <li style="float:right"><a href="adminlogin.php">Logout</a></li>
         <li style="float:right"><a class="active"href="profile.php">
             <?php
         
